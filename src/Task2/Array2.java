@@ -44,9 +44,11 @@ public class Array2  {
         int suma1=0;
         int numberOfOddNumbers1 = 0;
         int numberOfEvenNumbers1 = 0;
+        int count = 0;
 
         for(int i=0; i<BiDim.length;i++){
             for(int j=0; j< BiDim[i].length; j++){
+                count++;
 
                 if(BiDim[i][j] % 2 ==0){
                     numberOfEvenNumbers1++;
@@ -58,7 +60,7 @@ public class Array2  {
             }
 
         }
-        float average1 =(float) suma1/(BiDim[0].length + BiDim[1].length);
+        float average1 =(float) suma1/count;
         System.out.println("Suma Array bidimensional: " +suma1);
         System.out.println("Media Array bidimensional: " +average1);
         System.out.println("Numrul de elemente pare pentru matricea bidimensionala: " + numberOfEvenNumbers1);
